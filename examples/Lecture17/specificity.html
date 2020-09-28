@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Specificity</title>
+    <style>
+        /* 12 */
+        
+        header.navigation p {
+            color: blue;
+        }
+        /* 11 */
+        
+        p.blurb {
+            color: red;
+        }
+        /* It doesn't matter what the specificity is, I want to 
+        override everything and make this property they way 
+        I'm defining it. */
+        
+        p {
+            color: green !important;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="navigation">
+        <p class="blurb">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Quam veniam delectus unde aliquam eos, tempora quisquam repellendus nostrum qui, magni quo eum sed vel error velit debitis ipsa natus accusamus!</p>
+    </header>
+</body>
+
+</html>
